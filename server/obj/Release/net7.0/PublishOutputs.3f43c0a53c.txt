@@ -1,0 +1,7 @@
+D:\Coding\React\ShoppingList\server\bin\Release\net7.0\publish\server.exe
+D:\Coding\React\ShoppingList\server\bin\Release\net7.0\publish\appsettings.Development.json
+D:\Coding\React\ShoppingList\server\bin\Release\net7.0\publish\appsettings.json
+D:\Coding\React\ShoppingList\server\bin\Release\net7.0\publish\server.dll
+D:\Coding\React\ShoppingList\server\bin\Release\net7.0\publish\server.deps.json
+D:\Coding\React\ShoppingList\server\bin\Release\net7.0\publish\server.runtimeconfig.json
+D:\Coding\React\ShoppingList\server\bin\Release\net7.0\publish\server.pdb
