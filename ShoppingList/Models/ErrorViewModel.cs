@@ -1,4 +1,4 @@
-namespace server.Models;
+namespace ShoppingList.Models;
 
 public class ErrorViewModel
 {

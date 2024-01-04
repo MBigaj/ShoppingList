@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using server.Models;
+using ShoppingList.Models;
 
-namespace server.Controllers;
+namespace ShoppingList.Controllers;
 
 public class HomeController : Controller
 {
