@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Coding\\React\\ShoppingList\\ShoppingList\\ShoppingList.csproj": {}
+    "D:\\Coding\\React\\ShoppingList\\ShoppingList.csproj": {}
   },
   "projects": {
-    "D:\\Coding\\React\\ShoppingList\\ShoppingList\\ShoppingList.csproj": {
+    "D:\\Coding\\React\\ShoppingList\\ShoppingList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Coding\\React\\ShoppingList\\ShoppingList\\ShoppingList.csproj",
+        "projectUniqueName": "D:\\Coding\\React\\ShoppingList\\ShoppingList.csproj",
         "projectName": "ShoppingList",
-        "projectPath": "D:\\Coding\\React\\ShoppingList\\ShoppingList\\ShoppingList.csproj",
+        "projectPath": "D:\\Coding\\React\\ShoppingList\\ShoppingList.csproj",
         "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-        "outputPath": "D:\\Coding\\React\\ShoppingList\\ShoppingList\\obj\\",
+        "outputPath": "D:\\Coding\\React\\ShoppingList\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
