@@ -3,6 +3,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddSwaggerDocument(settings => {
+    settings.Title = "Test REST";
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,5 +29,8 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("index.html");
+
+app.UseOpenApi();
+app.UseSwaggerUi();
 
 app.Run();
