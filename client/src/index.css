@@ -43,3 +43,15 @@ body {
   -webkit-transition: color ease-in-out .15s;
   transition: color ease-in-out .15s;
 }
+
+.homepage h1 {
+  margin: 10px 0 10px 0;
+}
+
+.homepage h2 {
+  margin: 10px 0 10px 0;
+}
+
+.item {
+  font-size: 25px;
+}

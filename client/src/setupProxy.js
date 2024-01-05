@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://shopping-list-backend.azurewebsites.net',
+      target: 'https://shopping-list-backend-api.azurewebsites.net',
       changeOrigin: true,
     })
   );
