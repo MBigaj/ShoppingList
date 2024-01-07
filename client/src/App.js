@@ -4,6 +4,7 @@ import Homepage from './components/Homepage';
 import Navbar from './components/Navbar';
 import ItemList from './components/ItemList';
 import NotFound from './components/NotFound';
+import MyItems from './components/MyItems';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Routes>
               <Route exact path='/' element={ <Homepage/> } />
               <Route exact path='/items' element={ <ItemList/> } />
+              <Route exact path='/my-items' element={ <MyItems/> } />
               <Route exact path='*' element={ <NotFound/> } />
             </Routes>
           </div>

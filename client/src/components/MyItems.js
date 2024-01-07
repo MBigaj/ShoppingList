@@ -1,8 +1,8 @@
 import useFetchData from '../hooks/useFetchData';
 import Item from "./Item";
 
-const ItemList = () => {
-    const { data: items, isLoading, error } = useFetchData('/api/items');
+const MyItems = () => {
+    const { data: items, isLoading, error } = useFetchData('/api/my-items');
 
     return (
         <div className="item-list">
@@ -15,5 +15,5 @@ const ItemList = () => {
         </div>
     );
 }
-
-export default ItemList;
+ 
+export default MyItems;

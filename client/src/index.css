@@ -13,6 +13,7 @@ body {
   color: #333;
 }
 
+/* Navbar */
 .navbar {
   padding: 20px;
   display: flex;
@@ -44,6 +45,11 @@ body {
   transition: color ease-in-out .15s;
 }
 
+.links {
+  display: flex;
+}
+
+/* Homepage */
 .homepage h1 {
   margin: 10px 0 10px 0;
 }
@@ -52,6 +58,47 @@ body {
   margin: 10px 0 10px 0;
 }
 
+/* Item */
+.item-list {
+  width: 100%;
+  align-items: center;
+}
+
 .item {
+  width: 50%;
   font-size: 25px;
+  display: inline-block;
+}
+
+.label {
+  display: inline-flex;
+}
+
+.plus-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* CounterBlock */
+.counter-block {
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.counter-block button {
+  font-size: 20px;
+  width: 30px;
+}
+
+.counter-block p {
+  width: 30px;
+}
+
+.counter-block button.add {
+  border-radius: 0 25px 25px 0;
+}
+
+.counter-block button.substract {
+  border-radius: 25px 0 0 25px;
 }

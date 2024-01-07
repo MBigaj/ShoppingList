@@ -5,5 +5,6 @@ namespace ShoppingList.Models
         public int id { get; set; }
         public string name { get; set; }
         public float cost { get; set; }
+        public int count { get; set; }
     }
 }
