@@ -6,6 +6,7 @@ const ItemList = () => {
 
     return (
         <div className="item-list">
+            { console.log(items) }
             { error && <div>Could not fetch resource</div> }
             { isLoading && <div className="loading">Loading...</div> }
             { items && items.map((item) => 

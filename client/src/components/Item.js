@@ -21,10 +21,10 @@ const Item = ({ item }) => {
 
     function swapVisibility()
     {
-        let newCount = 1;
+        let newCount = itemCount ? 0 : 1;
         setIsHidden(!isHidden);
         setItemCount(newCount);
-        handleSend(newCount);
+        handleSend();
     }
 
     function addCount()
@@ -34,7 +34,6 @@ const Item = ({ item }) => {
 
         let newCount = itemCount + 1;
         setItemCount(newCount);
-        handleSend(newCount);
     }
 
     function substractCount()
@@ -44,8 +43,6 @@ const Item = ({ item }) => {
 
         if (newCount === 0)
             setIsHidden(!isHidden);
-
-        handleSend(newCount);
     }
 
     return (
@@ -61,9 +58,9 @@ const Item = ({ item }) => {
             </button>
 
             <div className="counter-block" style={{ visibility: mapHidden[!isHidden] }}>
-                <button className="substract" onClick={ substractCount }>-</button>
+                <button className="substract" onClick={ substractCount } onMouseLeave={ handleSend }>-</button>
                 <p>{ itemCount }</p>
-                <button className="add" onClick={ addCount }>+</button>
+                <button className="add" onClick={ addCount } onMouseLeave={ handleSend }>+</button>
             </div>
         </div>
     );
