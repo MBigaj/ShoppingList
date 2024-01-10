@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using ShoppingList.Database;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<ShoppingListDb>();
 
 builder.Services.AddSwaggerDocument(settings => {
     settings.Title = "Test REST";

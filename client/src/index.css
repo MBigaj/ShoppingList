@@ -81,9 +81,12 @@ body {
 
 /* CounterBlock */
 .counter-block {
+  position: absolute;
   font-size: 20px;
   display: inline-flex;
   align-items: center;
+  left: 20%;
+  top: 80%;
 }
 
 .counter-block button {
@@ -101,4 +104,21 @@ body {
 
 .counter-block button.substract {
   border-radius: 25px 0 0 25px;
+}
+
+/* Item */
+.item-grid {
+  position: relative;
+  border: 1px solid;
+  border-radius: 20%;
+  display: grid;
+  width: 150px;
+  height: 150px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-self: center;
+  overflow: hidden;
+  align-content: center;
+  float: left;
+  margin: 20px 20px 20px 20px;
 }

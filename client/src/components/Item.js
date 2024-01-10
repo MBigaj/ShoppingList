@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import plus from '../icons/plus_icon.svg';
+import MovieImageArr from './auxilary/MovieImages';
 
 const Item = ({ item }) => {
     const mapHidden = { true: 'hidden', false: ''}
-
     const [ isHidden, setIsHidden ] = useState(Boolean(item.count));
     const [ itemCount, setItemCount ] = useState(item.count);
 
@@ -46,8 +46,8 @@ const Item = ({ item }) => {
     }
 
     return (
-        <div key={ item.id }>
-            <p className='label'>{ item.name }</p>
+        <div key={ item.id } className='item-grid'>
+            <img src={ MovieImageArr[item.id] } alt={ item.name } height='120px' width='150px' />
 
             <button 
                 id={ item.id }
