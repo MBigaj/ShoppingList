@@ -9,35 +9,42 @@ namespace ShoppingList.Controllers
     [Route("[controller]")]
     public class ItemController : ControllerBase
     {
-        [HttpGet("/api/items")]
-        public async Item[] GetAllItems()
-        {
+        private ShoppingListDb db;
+        private StreamReader reader;
 
-            // return items;
+        public ItemController(ShoppingListDb db)
+        {
+            this.db = db;
+        }
+
+        [HttpGet("/api/items")]
+        public IEnumerable<Item> GetAllItems()
+        {
+            var items = this.db.Item.Select(s => new Item
+            {
+                id = s.id,
+                name = s.name,
+                cost = s.cost,
+                count = s.count,
+                imageId = s.imageId
+            });
+
+            return items;
         }
 
         [HttpGet("/api/my-items")]
-        public void GetMyItems()
+        public IEnumerable<Item> GetMyItems()
         {
-            // // Item[] items = Items.Where(i => i.count > 0).ToArray();
-            // Item[] myItems = Array.Empty<Item>();
-            // for (int i = 0; i < items.Length; i++) {
-            //     if (items[i].count > 0) {
-            //         myItems.Append(items[i]);
-            //     }
-            // }
+            var myItems = this.db.Item.Where(item => item.count > 0);
 
-            // return myItems;
+            return myItems;
         }
 
         [HttpPost("/api/new-item")]
         public void PostAddItem(Item item)
         {
-            // for (int i = 0; i < items.Length; i++) {
-            //     if (items[i].id == item.id) {
-            //         items[i].count = item.count;
-            //     }
-            // }
+            this.db.Item.Update(item);
+            this.db.SaveChanges();
         }
     }
 }

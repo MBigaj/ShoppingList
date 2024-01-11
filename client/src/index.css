@@ -122,3 +122,8 @@ body {
   float: left;
   margin: 20px 20px 20px 20px;
 }
+
+/* MyItems */
+.price-div hr {
+  width: 100%;
+}

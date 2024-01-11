@@ -8,7 +8,7 @@ const Item = ({ item }) => {
     const [ itemCount, setItemCount ] = useState(item.count);
 
     const handleSend = (e) => {
-        const addedItem = { id: item.id, name: item.name, cost: item.cost, count: itemCount }
+        const addedItem = { id: item.id, name: item.name, cost: item.cost, count: itemCount, imageId: item.imageId }
 
         fetch('/api/new-item', {
             method: 'POST',
@@ -47,7 +47,7 @@ const Item = ({ item }) => {
 
     return (
         <div key={ item.id } className='item-grid'>
-            <img src={ MovieImageArr[item.id] } alt={ item.name } height='120px' width='150px' />
+            <img src={ MovieImageArr[item.imageId] } alt={ item.name } height='120px' width='150px' />
 
             <button 
                 id={ item.id }

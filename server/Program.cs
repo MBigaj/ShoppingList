@@ -6,7 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<ShoppingListDb>();
+builder.Services.AddDbContext<ShoppingListDb>(options => {
+    options.UseSqlServer("Server=tcp:shopping-list-db.database.windows.net,1433;Initial Catalog=shopping-list-db;Persist Security Info=False;User ID=nick;Password=;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+});
 
 builder.Services.AddSwaggerDocument(settings => {
     settings.Title = "Test REST";
