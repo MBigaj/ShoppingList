@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import plus from '../icons/plus_icon.svg';
-import MovieImageArr from './auxilary/MovieImages';
+import ItemImageArr from './auxilary/ItemImages';
 
 const Item = ({ item }) => {
     const mapHidden = { true: 'hidden', false: ''}
@@ -8,7 +8,14 @@ const Item = ({ item }) => {
     const [ itemCount, setItemCount ] = useState(item.count);
 
     const handleSend = (e) => {
-        const addedItem = { id: item.id, name: item.name, cost: item.cost, count: itemCount, imageId: item.imageId }
+        const addedItem = { 
+            id: item.id,
+            name: item.name,
+            type: item.type,
+            cost: item.cost,
+            count: itemCount,
+            imageId: item.imageId 
+        }
 
         fetch('/api/new-item', {
             method: 'POST',
@@ -46,8 +53,22 @@ const Item = ({ item }) => {
     }
 
     return (
-        <div key={ item.id } className='item-grid'>
-            <img src={ MovieImageArr[item.imageId] } alt={ item.name } height='120px' width='150px' />
+        <div key={ item.id }>
+            <div className="item-name">
+                { item.name }
+            </div>
+
+            <div className="item-name">
+                { item.cost } PLN
+            </div>
+
+            <div>
+                <img 
+                src={ ItemImageArr[item.imageId] }
+                alt={ item.name }
+                className='item-image' 
+                />
+            </div>
 
             <button 
                 id={ item.id }

@@ -21,7 +21,7 @@ namespace ShoppingList.Database
             entity.ToTable("Item");
             entity.Property(a => a.name).IsRequired();
             entity.Property(a => a.cost).IsRequired();
-            entity.Property(a => a.name);
+            entity.Property(a => a.type);
             entity.Property(a => a.imageId).IsRequired();
         }
 

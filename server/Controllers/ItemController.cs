@@ -10,7 +10,6 @@ namespace ShoppingList.Controllers
     public class ItemController : ControllerBase
     {
         private ShoppingListDb db;
-        private StreamReader reader;
 
         public ItemController(ShoppingListDb db)
         {
@@ -24,12 +23,21 @@ namespace ShoppingList.Controllers
             {
                 id = s.id,
                 name = s.name,
+                type = s.type,
                 cost = s.cost,
                 count = s.count,
                 imageId = s.imageId
             });
 
             return items;
+        }
+
+        [HttpGet("/api/object-types")]
+        public IEnumerable<string> GetObjectTypes()
+        {
+            var types = this.db.Item.Select(a => a.type).Distinct();
+
+            return types;
         }
 
         [HttpGet("/api/my-items")]

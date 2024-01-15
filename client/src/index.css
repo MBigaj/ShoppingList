@@ -58,12 +58,35 @@ body {
   margin: 10px 0 10px 0;
 }
 
-/* Item */
+/* ItemList */
 .item-list {
   width: 100%;
   align-items: center;
 }
 
+.filter-options {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.filter {
+  display: inline;
+}
+
+.filter h3 {
+  display: inline;
+}
+
+.filter select {
+  margin-left: 15px;
+}
+
+.search {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Item */
 .item {
   width: 50%;
   font-size: 25px;
@@ -74,9 +97,22 @@ body {
   display: inline-flex;
 }
 
+.item-image {
+  height: 80px;
+  width: auto;
+  object-fit: cover;
+}
+
+/* Icons */
 .plus-icon {
   width: 20px;
   height: 20px;
+  padding: 0 3px 0 3px;
+}
+
+.refresh-icon {
+  width: 30px;
+  height: 30px;
 }
 
 /* CounterBlock */
@@ -99,18 +135,22 @@ body {
 }
 
 .counter-block button.add {
-  border-radius: 0 25px 25px 0;
+  background-color: #a1d0f0;
+  border-radius: 0 25% 25% 0;
+  border: 1px;
 }
 
 .counter-block button.substract {
-  border-radius: 25px 0 0 25px;
+  background-color: #a1d0f0;
+  border-radius: 25% 0 0 25%;
+  border: 1px;
 }
 
 /* Item */
 .item-grid {
   position: relative;
   border: 1px solid;
-  border-radius: 20%;
+  border-radius: 10%;
   display: grid;
   width: 150px;
   height: 150px;
@@ -123,7 +163,29 @@ body {
   margin: 20px 20px 20px 20px;
 }
 
+.item-button {
+  background-color: #a1d0f0;
+  border-radius: 20%;
+  border: 1px;
+}
+
 /* MyItems */
 .price-div hr {
   width: 100%;
+}
+
+.total-price {
+  margin-top: 15px;
+}
+
+.total-price h2 {
+  display: inline;
+}
+
+.total-price button {
+  margin-left: 15px;
+}
+
+.refresh {
+  border-radius: 40%;
 }
