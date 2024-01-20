@@ -3,8 +3,8 @@ import useFetchData from '../hooks/useFetchData';
 import Item from "./Item";
 
 const ItemList = () => {
-    const { data: items, isLoading, error } = useFetchData('/api/items')
-    const { data: objectTypes } = useFetchData('/api/object-types')
+    const { data: items, isLoading, error } = useFetchData('https://shopping-list-backend-api.azurewebsites.net/api/items')
+    const { data: objectTypes } = useFetchData('https://shopping-list-backend-api.azurewebsites.net/api/object-types')
 
     const [ type, setType ] = useState('');
     const [ filter, setFilter ] = useState('');
