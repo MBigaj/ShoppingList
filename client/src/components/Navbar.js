@@ -6,8 +6,8 @@ const Navbar = () => {
             <h1>The Shopping List</h1>
             <div className="links">
                 <Link to='/'>Home</Link>
-                <Link to='/items'>Add more items</Link>
-                <Link to='/my-items'>My item list</Link>
+                <Link to='/items' urlItems='/api/items' urlTypes='/api/object-types'>Add more items</Link>
+                <Link to='/my-items' url={ '/api/my-items' }>My item list</Link>
             </div>
         </nav>
     );

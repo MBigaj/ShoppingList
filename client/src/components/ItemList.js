@@ -2,9 +2,9 @@ import { useState } from 'react';
 import useFetchData from '../hooks/useFetchData';
 import Item from "./Item";
 
-const ItemList = () => {
-    const { data: items, isLoading, error } = useFetchData('https://shopping-list-backend-api.azurewebsites.net/api/items')
-    const { data: objectTypes } = useFetchData('https://shopping-list-backend-api.azurewebsites.net/api/object-types')
+const ItemList = ( urlItems, urlTypes ) => {
+    const { data: items, isLoading, error } = useFetchData(urlItems)
+    const { data: objectTypes } = useFetchData(urlTypes)
 
     const [ type, setType ] = useState('');
     const [ filter, setFilter ] = useState('');

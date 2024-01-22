@@ -3,8 +3,8 @@ import useFetchData from '../hooks/useFetchData';
 import Item from "./Item";
 import refresh from "../icons/refresh-icon.svg";
 
-const MyItems = () => {
-    const { data: items, isLoading, error } = useFetchData('https://shopping-list-backend-api.azurewebsites.net/api/my-items');
+const MyItems = ( url ) => {
+    const { data: items, isLoading, error } = useFetchData(url);
 
     const [ totalPrice, setTotalPrice ] = useState(0);
 
