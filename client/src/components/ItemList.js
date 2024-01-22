@@ -2,9 +2,9 @@ import { useState } from 'react';
 import useFetchData from '../hooks/useFetchData';
 import Item from "./Item";
 
-const ItemList = ( urlItems, urlTypes ) => {
-    const { data: items, isLoading, error } = useFetchData(urlItems)
-    const { data: objectTypes } = useFetchData(urlTypes)
+const ItemList = () => {
+    const { data: items, isLoading, error } = useFetchData('/api/items')
+    const { data: objectTypes } = useFetchData('/api/object-types')
 
     const [ type, setType ] = useState('');
     const [ filter, setFilter ] = useState('');
